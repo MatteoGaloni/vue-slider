@@ -53,5 +53,6 @@ createApp({
       }
       return addingclass;
     },
+    autoPlay() {},
   },
 }).mount("#app");
