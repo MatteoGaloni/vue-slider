@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      myTimer: null,
       currentSlide: 0,
       slides: [
         {
@@ -53,6 +54,8 @@ createApp({
       }
       return addingclass;
     },
-    autoPlay() {},
+    autoPlay() {
+      this.myTimer = setInterval(this.nextSlide());
+    },
   },
 }).mount("#app");
