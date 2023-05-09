@@ -34,6 +34,11 @@ createApp({
     };
   },
   methods: {
-    addClass(i) {},
+    previousSlide: function () {
+      if (this.currentSlide == 0) {
+        this.currentSlide = 5;
+      }
+      this.currentSlide--;
+    },
   },
 }).mount("#app");
