@@ -40,5 +40,11 @@ createApp({
       }
       this.currentSlide--;
     },
+    nextSlide: function () {
+      if (this.currentSlide == 4) {
+        this.currentSlide = 0;
+      }
+      this.currentSlide++;
+    },
   },
 }).mount("#app");
