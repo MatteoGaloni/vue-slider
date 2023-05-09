@@ -42,9 +42,16 @@ createApp({
     },
     nextSlide: function () {
       if (this.currentSlide == 4) {
-        this.currentSlide = 0;
+        this.currentSlide = -1;
       }
       this.currentSlide++;
+    },
+    addClass(i) {
+      let addingclass = "thumb";
+      if (this.currentSlide == i) {
+        addingclass = "thumb active";
+      }
+      return addingclass;
     },
   },
 }).mount("#app");
