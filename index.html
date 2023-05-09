@@ -18,16 +18,11 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img v-for="(slide,i) in slides" :src=" slides[i].image" alt="slides[i].title" />
-                    <!-- <div class="text">
-                        <h3>Spiderman</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
-                        </p>
-                    </div> -->
+                    <img :src=" slides[currentSlide].image" alt="slides[currentSlide].title" />
+                    <div class="text">
+                        <h3>{{slides[currentSlide].title}}</h3>
+                        <p>{{slides[currentSlide].text}}</p>
+                    </div>
                 </div>
 
                 <div class="thumbs">
